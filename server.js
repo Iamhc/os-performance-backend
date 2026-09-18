@@ -3,8 +3,12 @@ const cors = require("cors");
 const os = require("os");
 
 const app = express();
-app.use(cors());
 
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 let history = [];
 
 // Default route (IMPORTANT!)
